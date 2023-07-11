@@ -3,7 +3,7 @@
 
 
 
-## `WhyShift`: A Benchmark with Specified Distribution Shift Patterns
+## `WhyShift`: A Benchmark with Specified Distribution Shift Patterns 
 
 > Jiashuo Liu, Tianyu Wang, Peng Cui, Hongseok Namkoong
 
@@ -73,7 +73,7 @@ pip3 install whyshift
     * `task` values: 'income', 'pubcov', 'mobility'
   * examples:
     ```python
-    from tabularoodbench import get_data
+    from whyshift import get_data
     # for ACS Income
     X, y, feature_names = get_data("income", "CA", 2018, True, './datasets/acs/')
     # for ACS Public Coverage
@@ -99,7 +99,7 @@ pip3 install whyshift
   * pass the `path to the data file` of `get_data` function
   * example:
     ```python
-    from tabularoodbench import get_data
+    from whyshift import get_data
     # for US Accident
     X, y = get_data("accident", "CA", True, './datasets/Accident/US_Accidents_Dec21_updated.csv')
     # for Taxi
