@@ -85,7 +85,7 @@ def mobility_filter(data):
 
 def get_USAccident(state, need_preprocess, root_dir='./datasets/USAccident/US_Accidents_Dec21_updated.csv'):
     if not state in ['CA', 'TX', 'FL', 'OR', 'MN', 'VA', 'SC', 'NY', 'PA', 'NC', 'TN', 'MI', 'MO']:
-        raise NotImplementedError(f"{state} is not supported in this dataset")
+        raise NotImplementedError(f"{state} is not supported in this dataset!")
 
     raw_X = preprocess(root_dir)
     data = raw_X[raw_X["State"]==state]
@@ -117,21 +117,9 @@ def get_taxi(city, need_preprocess,root_dir='./datasets/taxi/nyc_clean.csv'):
     df.drop(['store_and_fwd_flag'], axis=1, inplace=True)
     df.drop(['vendor_id'], axis=1, inplace=True)
     df['pickup_datetime'] = pd.to_datetime(df.pickup_datetime)
-    df['dropoff_datetime'] = pd.to_datetime(df.dropoff_datetime)
-    df['dp_month'] = df.dropoff_datetime.dt.month
-    df['dp_week'] = df.dropoff_datetime.dt.week
-    df['dp_weekday'] = df.dropoff_datetime.dt.weekday
-    df['dp_hour'] = df.dropoff_datetime.dt.hour
-    df['dp_minute'] = df.dropoff_datetime.dt.minute
-    df['dp_minute_oftheday'] = df['dp_hour'] * 60 + df['dp_minute']
-    df.drop(['dp_minute'], axis=1, inplace=True)
-
-
-
     df.drop(['dropoff_datetime'], axis=1, inplace=True) 
-
     df['month'] = df.pickup_datetime.dt.month
-    df['week'] = df.pickup_datetime.dt.week
+    df['week'] = df.pickup_datetime.dt.isocalendar().week
     df['weekday'] = df.pickup_datetime.dt.weekday
     df['hour'] = df.pickup_datetime.dt.hour
     df['minute'] = df.pickup_datetime.dt.minute

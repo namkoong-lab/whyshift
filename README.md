@@ -12,7 +12,7 @@
 
 
 
-`WhyShift` is a python package that provides a benchmark with various specified distribution shift patterns on real-world tabular data. Our testbed highlights the importance of future research that builds an understanding of how distributions differ.
+`WhyShift` is a python package that provides a benchmark with various specified distribution shift patterns on real-world tabular data. Our testbed highlights the importance of future research that builds an understanding of how distributions differ. For more details, please refer to our <a href="https://arxiv.org/abs/2307.05284">paper</a>.
 
 
 
@@ -76,11 +76,11 @@ pip3 install whyshift
     ```python
     from whyshift import get_data
     # for ACS Income
-    X, y, feature_names = get_data("income", "CA", 2018, True, './datasets/acs/')
+    X, y, feature_names = get_data("income", "CA", True, './datasets/acs/', 2018)
     # for ACS Public Coverage
-    X, y, feature_names = get_data("pubcov", "CA", 2018, True, './datasets/acs/')
+    X, y, feature_names = get_data("pubcov", "CA", True, './datasets/acs/', 2018)
     # for ACS Mobility
-    X, y, feature_names = get_data("mobility", "CA", 2018, True, './datasets/acs/')
+    X, y, feature_names = get_data("mobility", "CA", True, './datasets/acs/', 2018)
     ```
   * support `state` values: 
     * ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY', 'PR']
