@@ -1,4 +1,3 @@
-LICENSE
 README.md
 setup.py
 whyshift/__init__.py
