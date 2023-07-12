@@ -1,4 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?color=g&style=plastic)](https://opensource.org/licenses/MIT)
+[![Downloads](https://static.pepy.tech/badge/whyshift)](https://pepy.tech/project/whyshift)
 [![pypy: v](https://img.shields.io/pypi/v/whyshift.svg)](https://pypi.python.org/pypi/whyshift)
 
 
@@ -101,9 +102,9 @@ pip3 install whyshift
     ```python
     from whyshift import get_data
     # for US Accident
-    X, y = get_data("accident", "CA", True, './datasets/Accident/US_Accidents_Dec21_updated.csv')
+    X, y, _ = get_data("accident", "CA", True, './datasets/Accident/US_Accidents_Dec21_updated.csv')
     # for Taxi
-    X, y = get_data("taxi", "nyc", True, './datasets/Taxi/train.csv')
+    X, y, _ = get_data("taxi", "nyc", True, './datasets/Taxi/train.csv')
     ```
   * support `state` values:
     * for US Accident:  ['CA', 'TX', 'FL', 'OR', 'MN', 'VA', 'SC', 'NY', 'PA', 'NC', 'TN', 'MI', 'MO']
