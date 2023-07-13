@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?color=g&style=plastic)](https://opensource.org/licenses/MIT)
-[![Downloads](https://static.pepy.tech/badge/whyshift)](https://pepy.tech/project/whyshift)
+[![Downloads](https://static.pepy.tech/personalized-badge/whyshift?period=total&units=abbreviation&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/whyshift)
 [![pypy: v](https://img.shields.io/pypi/v/whyshift.svg)](https://pypi.python.org/pypi/whyshift/)
 
 
