@@ -2,7 +2,7 @@ from setuptools import setup,find_packages
 
 setup(
     name='whyshift',
-    version='0.0.2',    
+    version='0.0.4',    
     description='A package of various specified distribution shift patterns of out-of-distributoin generalization problem on tabular data',
     url='https://github.com/namkoong-lab/whyshift',
     author='Jiashuo Liu, Tianyu Wang, Peng Cui, Hongseok Namkoong',
@@ -10,7 +10,8 @@ setup(
     packages=find_packages(),
     install_requires=['pandas',
                       'numpy',                     
-                      'scikit-learn'
+                      'scikit-learn',
+                      'lightgbm','xgboost','fairlearn', 'tqdm', 'torch', 'scipy'
                       ],
     classifiers=[
         "Programming Language :: Python :: 3",

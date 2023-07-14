@@ -20,8 +20,9 @@
 1. [Dataset Access](#basic-installation-instructions)
 2. [Python Package: `whyshift`](#python-package-whyshift)
 3. [Different Distribution Shift Patterns](#different-distribution-shift-patterns)
-3. [License and terms of use](#license-and-terms-of-use)
-4. [References](#references)
+4. [Implemented Algorithms](#implemented-algorithms)
+5. [License and terms of use](#license-and-terms-of-use)
+6. [References](#references)
 
 
 
@@ -140,6 +141,24 @@ Based on our `whyshift` package, one could design various source-target pairs wi
 | 22 | ACS Income | Synthetic | 9 | Income≥50k | Younger People (90%) | 20,000 | 1 | X: 1/1 |
 
 In our benchmark, each setting has multiple target domains (except the last setting). In our main body, we select only one target domain for each setting. We report the `Dom. Ratio` to represent the dominant ratio of $Y|X$ shifts or $X$ shifts in source-target pairs with performance degradation larger than **5** percentage points in each setting. For example, "$Y|X$: 13/14" means that there are 14 source-target pairs in Setting 1 with degradation larger than 5 percentage points and 13 out of them with over 50\% degradation attributed to $Y|X$ shifts. We use XGBoost to measure this.
+
+
+## Implemented Algorithms
+In our `whyshift` package, we also implement several algorithms for tabular data classification, including `Logistic Regression`, `MLP`, `SVM`, `Random Forest`, `XGBoost`, `LightGBM`, `GBM`, $\chi^2$/CVaR-`DRO/DORO`, `Group DRO`, `Simple-Reweighting`, `JTT`, `Fairness-In/Postprocess` and `DWR` methods.
+
+```python
+# use the implemented methods
+algo = fetch_model(method_name)
+```
+
+Note that the supported method names are:
+
+```python
+method_name_list = ['lr','svm','xgb', 'lightgbm', 'rf',  'dwr', 'jtt','suby', 'subg', 'rwy', 'rwg', 'FairPostprocess_exp','FairInprocess_dp', 'FairPostprocess_threshold', 'FairInprocess_eo', 'FairInprocess_error_parity','chi_dro', 'chi_doro','cvar_dro','cvar_doro','group_dro']
+```
+
+
+
 
 ## License and terms of use
 Our benchmark is built upon `Folktables`. The License of `Folktables` is:

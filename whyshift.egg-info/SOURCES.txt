@@ -1,6 +1,8 @@
+LICENSE
 README.md
 setup.py
 whyshift/__init__.py
+whyshift/algorithm.py
 whyshift/dataset.py
 whyshift/folktables_utils.py
 whyshift/utils.py
@@ -19,3 +21,8 @@ whyshift/folktables/utils/__init__.py
 whyshift/folktables/utils/download_utils.py
 whyshift/folktables/utils/files_resources.py
 whyshift/folktables/utils/load_utils.py
+whyshift/methods/__init__.py
+whyshift/methods/marginal_dro_criterion.py
+whyshift/methods/model_family.py
+whyshift/methods/model_util.py
+whyshift/methods/robust_loss.py

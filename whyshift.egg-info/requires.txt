@@ -1,3 +1,9 @@
-numpy
 pandas
+numpy
 scikit-learn
+lightgbm
+xgboost
+fairlearn
+tqdm
+torch
+scipy
