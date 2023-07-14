@@ -173,4 +173,5 @@ Besides, for US Accident and Taxi data from `kaggle`, individuals should follow 
 ## References
 [1] Ding, F., Hardt, M., Miller, J., & Schmidt, L. (2021). Retiring adult: New datasets for fair machine learning. Advances in neural information processing systems, 34, 6478-6490.
 
-ps: we modify the <a href="https://github.com/socialfoundations/folktables">`folktables`</a> code to support `year` before 2014, and therefore we involve it in our package. 
+* We modify the <a href="https://github.com/socialfoundations/folktables">`folktables`</a> code to support `year` before 2014, and involve the revised version in our package. 
+* Part of the algorithm codes are used from the <a href="https://github.com/jpgard/subgroup-robustness-grows-on-trees">codebase</a>.
