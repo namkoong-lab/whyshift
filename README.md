@@ -21,8 +21,9 @@
 2. [Python Package: `whyshift`](#python-package-whyshift)
 3. [Different Distribution Shift Patterns](#different-distribution-shift-patterns)
 4. [Implemented Algorithms](#implemented-algorithms)
-5. [License and terms of use](#license-and-terms-of-use)
-6. [References](#references)
+5. [Degradation Decomposition (DISDE)](#disde-method)
+6. [License and terms of use](#license-and-terms-of-use)
+7. [References](#references)
 
 
 
@@ -157,6 +158,18 @@ Note that the supported method names are:
 method_name_list = ['lr','svm','xgb', 'lightgbm', 'rf',  'dwr', 'jtt','suby', 'subg', 'rwy', 'rwg', 'FairPostprocess_exp','FairInprocess_dp', 'FairPostprocess_threshold', 'FairInprocess_eo', 'FairInprocess_error_parity','chi_dro', 'chi_doro','cvar_dro','cvar_doro','group_dro']
 ```
 
+## DISDE Method
+In our `whyshift` package, we implement the DIstribution Shift DEcomposition (`DISDE`) method to attribute the performance degradation to $Y|X$-shifts and $X$-shifts, respectively. 
+Function `degradation_decomp` 
+
+The parameters include: 
+* source_X, source_y, other_X_raw, other_y_raw: data from the source and target distributions
+* best_method: the model to be diagnosed
+* data_sum: the sample num of target data
+* K: K-fold training-testing
+* domain_classifier: when not specified (None), XGBoost will be used
+* draw_calibration: whether to draw the calibration curve to check the quality of domain classifier
+* save_calibration_png: the path to save the calibration figure
 
 
 
