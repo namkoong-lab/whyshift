@@ -2,7 +2,7 @@ from setuptools import setup,find_packages
 
 setup(
     name='whyshift',
-    version='0.0.6',    
+    version='0.0.7',    
     description='A package of various specified distribution shift patterns of out-of-distributoin generalization problem on tabular data',
     url='https://github.com/namkoong-lab/whyshift',
     author='Jiashuo Liu, Tianyu Wang, Peng Cui, Hongseok Namkoong',

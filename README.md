@@ -164,9 +164,11 @@ In our `whyshift` package, we implement the risk region identification algorithm
 And here is an example to use it:
 
 ```python
+from whyshift import risk_region
+
 source_model = xgb.XGBClassifier()
 target_model = xgb.XGBClassifier()
-compare_best_model('xgb', source_model, target_model, 'income', 'CA', 'PR', "./datasets/acs")
+risk_region('xgb', source_model, target_model, 'income', 'CA', 'PR', "./datasets/acs")
 ```
 
 

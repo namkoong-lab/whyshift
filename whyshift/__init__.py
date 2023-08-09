@@ -1,5 +1,5 @@
 # Built on Folktables and the codebase https://github.com/jpgard/subgroup-robustness-grows-on-trees
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 __author__ = 'Jiashuo Liu, Tianyu Wang, Peng Cui, Hongseok Namkoong'
 
 
