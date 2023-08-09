@@ -21,9 +21,10 @@
 2. [Python Package: `whyshift`](#python-package-whyshift)
 3. [Different Distribution Shift Patterns](#different-distribution-shift-patterns)
 4. [Implemented Algorithms](#implemented-algorithms)
-5. [Degradation Decomposition (DISDE)](#disde-method)
-6. [License and terms of use](#license-and-terms-of-use)
-7. [References](#references)
+5. [Algorithm for Identifying Risk Region](#identify-risk-region)
+6. [Degradation Decomposition (DISDE)](#disde-method)
+7. [License and terms of use](#license-and-terms-of-use)
+8. [References](#references)
 
 
 
@@ -158,6 +159,18 @@ Note that the supported method names are:
 method_name_list = ['lr','svm','xgb', 'lightgbm', 'rf',  'dwr', 'jtt','suby', 'subg', 'rwy', 'rwg', 'FairPostprocess_exp','FairInprocess_dp', 'FairPostprocess_threshold', 'FairInprocess_eo', 'FairInprocess_error_parity','chi_dro', 'chi_doro','cvar_dro','cvar_doro','group_dro']
 ```
 
+## Identify Risk Region
+In our `whyshift` package, we implement the risk region identification algorithm (Algorithm 1 in our paper). The function is `risk_region`.
+And here is an example to use it:
+
+```python
+source_model = xgb.XGBClassifier()
+target_model = xgb.XGBClassifier()
+compare_best_model('xgb', source_model, target_model, 'income', 'CA', 'PR', "./datasets/acs")
+```
+
+
+
 ## DISDE Method
 In our `whyshift` package, we implement the DIstribution Shift DEcomposition (`DISDE`) method to attribute the performance degradation to $Y|X$-shifts and $X$-shifts, respectively. 
 Function `degradation_decomp` 
@@ -189,3 +202,14 @@ Besides, for US Accident and Taxi data from `kaggle`, individuals should follow 
 
 * We modify the <a href="https://github.com/socialfoundations/folktables">`folktables`</a> code to support `year` before 2014, and involve the revised version in our package. 
 * Part of the algorithm codes are used from the <a href="https://github.com/jpgard/subgroup-robustness-grows-on-trees">codebase</a>.
+
+
+
+
+
+<!-- if __name__ == '__main__':
+    source_model = xgb.XGBClassifier()
+    target_model = xgb.XGBClassifier()
+    
+    compare_best_model('xgb', source_model, target_model, 'income', 'CA', 'PR', "/home/jiashuoliu/TabularWilds/src/datasets/acs")
+  -->

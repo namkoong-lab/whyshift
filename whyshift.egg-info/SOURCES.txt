@@ -6,6 +6,7 @@ whyshift/algorithm.py
 whyshift/dataset.py
 whyshift/disde.py
 whyshift/folktables_utils.py
+whyshift/region_analysis.py
 whyshift/utils.py
 whyshift.egg-info/PKG-INFO
 whyshift.egg-info/SOURCES.txt
