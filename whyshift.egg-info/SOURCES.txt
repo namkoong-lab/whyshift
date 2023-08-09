@@ -4,6 +4,7 @@ setup.py
 whyshift/__init__.py
 whyshift/algorithm.py
 whyshift/dataset.py
+whyshift/disde.py
 whyshift/folktables_utils.py
 whyshift/utils.py
 whyshift.egg-info/PKG-INFO

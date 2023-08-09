@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: whyshift
-Version: 0.0.4
+Version: 0.0.5
 Summary: A package of various specified distribution shift patterns of out-of-distributoin generalization problem on tabular data
 Home-page: https://github.com/namkoong-lab/whyshift
 Author: Jiashuo Liu, Tianyu Wang, Peng Cui, Hongseok Namkoong
