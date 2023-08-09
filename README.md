@@ -171,6 +171,7 @@ The parameters include:
 * draw_calibration: whether to draw the calibration curve to check the quality of domain classifier
 * save_calibration_png: the path to save the calibration figure
 
+An example to use our `WHYSHIFT` package could be found at <a href="./Example.ipynb">`Example.ipynb`</a>.
 
 
 ## License and terms of use
