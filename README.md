@@ -12,7 +12,7 @@
 
 
 
-`WhyShift` is a python package that provides a benchmark with various specified distribution shift patterns on real-world tabular data. Our testbed highlights the importance of future research that builds an understanding of how distributions differ. For more details, please refer to our <a href="https://arxiv.org/abs/2307.05284">paper</a>.
+`WhyShift` is a python package that provides a benchmark with various specified distribution shift patterns on real-world tabular data. Our testbed highlights the importance of future research that builds an understanding of how distributions differ. For more details, please refer to our <a href="https://openreview.net/pdf?id=PF0lxayYST">paper</a>.
 
 
 
