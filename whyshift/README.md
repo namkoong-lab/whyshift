@@ -1,18 +1,3 @@
-Metadata-Version: 2.1
-Name: whyshift
-Version: 0.1.0
-Summary: A package of various specified distribution shift patterns of out-of-distributoin generalization problem on tabular data, and tools for diagnosing model performance are integrated.
-Home-page: https://github.com/namkoong-lab/whyshift
-Author: Jiashuo Liu, Tianyu Wang, Peng Cui, Hongseok Namkoong
-Author-email: liujiashuo77@gmail.com, tw2837@columbia.edu, cuip@tsinghua.edu.cn, namkoong@gsb.columbia.edu
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
-Classifier: Operating System :: MacOS
-Classifier: Operating System :: POSIX :: Linux
-Requires-Python: >=3
-Description-Content-Type: text/markdown
-License-File: LICENSE
-
 ## `WhyShift`: A Benchmark with Specified Distribution Shift Patterns 
 
 > <a href="https://ljsthu.github.io">Jiashuo Liu*</a>, <a href="https://wangtianyu61.github.io">Tianyu Wang*</a>, <a href="https://pengcui.thumedialab.com">Peng Cui</a>, <a href="https://hsnamkoong.github.io">Hongseok Namkoong</a>
