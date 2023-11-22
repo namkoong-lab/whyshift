@@ -101,7 +101,7 @@ def get_USAccident(state, need_preprocess, root_dir='./datasets/USAccident/US_Ac
     # print(X_sample.shape, yq_sample.shape)
     return X_sample, y_sample.to_numpy().astype('int'), None
 
-def get_taxi(city, need_preprocess,root_dir='./datasets/taxi/nyc_clean.csv'):
+def get_taxi(city, need_preprocess,root_dir='./datasets/taxi/nyc_clean.csv', is_regression = False):
 
     remove_col_nyc = ['id', 'pickup_latitude', 'pickup_longitude', 'dropoff_latitude', 'dropoff_longitude', 'passenger_count']
     remove_col_other = ['id', 'dist_meters', 'wait_sec', 'pickup_latitude', 'pickup_longitude', 'dropoff_latitude', 'dropoff_longitude']
@@ -168,8 +168,11 @@ def get_taxi(city, need_preprocess,root_dir='./datasets/taxi/nyc_clean.csv'):
         test = test.sample(n = 10000)
     except:
         pass
+    if is_regression == False:
+        y_sample = df["trip_duration"].apply(lambda x: 0 if x < 900 else 1)
+    else:
+        y_sample = df["trip_duration"]
 
-    y_sample = df["trip_duration"].apply(lambda x: 0 if x < 900 else 1)
     df.drop(["trip_duration"], axis=1, inplace=True)
     if city == 'nyc':
         df.drop(remove_col_nyc, axis=1, inplace=True)
@@ -288,7 +291,7 @@ def get_ACSMobility(state, year=2018, need_preprocess=True, root_dir = './datase
     return source_X_raw, source_y_raw.astype("int"), new_features
 
 
-def get_data(task, state, need_preprocess, root_dir, year=2018):
+def get_data(task, state, need_preprocess, root_dir, year=2018, is_regression = False):
     if task == 'income':
         return get_ACSIncome(state, year, need_preprocess, root_dir)
     elif task == 'income_aug':
@@ -300,4 +303,4 @@ def get_data(task, state, need_preprocess, root_dir, year=2018):
     elif task == 'accident':
         return get_USAccident(state, need_preprocess, root_dir)
     elif task == 'taxi':
-        return get_taxi(state, need_preprocess, root_dir)
+        return get_taxi(state, need_preprocess, root_dir, is_regression)
