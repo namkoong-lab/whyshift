@@ -1,8 +1,8 @@
 from setuptools import setup,find_packages
 import os 
 
-dir_path = os.path.dirname(os.path.abspath(__file__))
-md_path = os.path.join(dir_path, 'whyshift/README.md')
+here = os.path.abspath(os.path.dirname(__file__))
+md_path = os.path.join(here, 'whyshift/README.md')
 
 setup(
     name='whyshift',
