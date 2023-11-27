@@ -6,7 +6,7 @@ md_path = os.path.join(here, 'whyshift/README.md')
 
 setup(
     name='whyshift',
-    version='0.1.2',    
+    version='0.1.3',    
     description='A package of various specified distribution shift patterns of out-of-distributoin generalization problem on tabular data, and tools for diagnosing model performance are integrated.',
     long_description=open(md_path, encoding='utf-8').read(),
     long_description_content_type='text/markdown',
