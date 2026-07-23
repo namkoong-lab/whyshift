@@ -19,6 +19,18 @@ If you find this repository useful in your research, please cite the following p
 }
 ```
 
+
+This paper as follows is an extended version of the previous conference paper, including more algorithms and distribution shifts on tabular data:
+```
+@article{wang2026rethinking,
+  title={Rethinking Distribution Shifts: Empirical Analysis and Modeling for Tabular Data},
+  author={Wang, Tianyu and Liu, Jiashuo and Cui, Peng and Namkoong, Hongseok},
+  journal={Management Science (forthcoming)},
+  year={2026}
+}
+```
+
+
 ### For settings utilizing ACS Income, Public Coverage, Mobility datasets
   * `get_data(task, state, year, need_preprocess, root_dir)` function
     * `task` values: 'income', 'pubcov', 'mobility'

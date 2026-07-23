@@ -14,7 +14,7 @@
 
 `WhyShift` is a python package that provides a benchmark with various specified distribution shift patterns on real-world tabular data. Our testbed highlights the importance of future research that builds an understanding of how distributions differ. For more details, please refer to our <a href="https://openreview.net/pdf?id=PF0lxayYST">paper</a>.
 
-If you find this repository useful in your research, please cite the following paper:
+If you find this repository useful in your research, please cite either of the following papers:
 
 ```
 @inproceedings{liu2023need,
@@ -25,16 +25,35 @@ If you find this repository useful in your research, please cite the following p
 }
 ```
 
+This paper as follows is an extended version of the previous conference paper, including more algorithms and distribution shifts on tabular data:
+```
+@article{wang2026rethinking,
+  title={Rethinking Distribution Shifts: Empirical Analysis and Modeling for Tabular Data},
+  author={Wang, Tianyu and Liu, Jiashuo and Cui, Peng and Namkoong, Hongseok},
+  journal={Management Science (forthcoming)},
+  year={2026}
+}
+```
 
 ## Table of Contents
-1. [Dataset Access](#dataset-access)
-2. [Python Package: `whyshift`](#python-package-whyshift)
-3. [Different Distribution Shift Patterns](#different-distribution-shift-patterns)
-4. [Implemented Algorithms](#implemented-algorithms)
-5. [Algorithm for Identifying Risk Region](#identify-risk-region)
-6. [Degradation Decomposition (DISDE)](#disde-method)
-7. [License and terms of use](#license-and-terms-of-use)
-8. [References](#references)
+- [`WhyShift`: A Benchmark with Specified Distribution Shift Patterns](#whyshift-a-benchmark-with-specified-distribution-shift-patterns)
+- [Table of Contents](#table-of-contents)
+- [Dataset Access](#dataset-access)
+    - [ACS Income](#acs-income)
+    - [ACS PubCov](#acs-pubcov)
+    - [ACS Mobility](#acs-mobility)
+    - [Taxi Dataset](#taxi-dataset)
+    - [US Accident Dataset](#us-accident-dataset)
+- [Python Package: `whyshift`](#python-package-whyshift)
+    - [Install the package](#install-the-package)
+    - [For settings utilizing ACS Income, Public Coverage, Mobility datasets](#for-settings-utilizing-acs-income-public-coverage-mobility-datasets)
+    - [For settings utilizing US Accident, Taxi datasets](#for-settings-utilizing-us-accident-taxi-datasets)
+- [Different Distribution Shift Patterns](#different-distribution-shift-patterns)
+- [Implemented Algorithms](#implemented-algorithms)
+- [Identify Risk Region](#identify-risk-region)
+- [DISDE Method](#disde-method)
+- [License and terms of use](#license-and-terms-of-use)
+- [References](#references)
 
 
 

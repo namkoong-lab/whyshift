@@ -239,7 +239,7 @@ def get_ACSIncome_aug(state, year=2018, need_preprocess=True, root_dir = './data
 def get_ACSPubCov(state, year=2018, need_preprocess=True, root_dir = './datasets/acs'):
     task = ACSPublicCoverage
     data_source = ACSDataSource(root_dir=root_dir, survey_year=year, horizon='1-Year', survey='person')
-    source_data = data_source.get_data(states=[state], download=False)
+    source_data = data_source.get_data(states=[state], download=True)
     
     source_data = public_coverage_filter(source_data)
     rac1p_vals = ['white','black','am_ind','alaska','am_alaska','asian','hawaiian','other','two_or_more']
@@ -264,7 +264,7 @@ def get_ACSPubCov(state, year=2018, need_preprocess=True, root_dir = './datasets
 def get_ACSMobility(state, year=2018, need_preprocess=True, root_dir = './datasets/acs'):
     task = ACSMobility
     data_source = ACSDataSource(root_dir=root_dir, survey_year=year, horizon='1-Year', survey='person')
-    source_data = data_source.get_data(states=[state], download=False)
+    source_data = data_source.get_data(states=[state], download=True)
     
     source_data = mobility_filter(source_data)
     rac1p_vals = ['white','black','am_ind','alaska','am_alaska','asian','hawaiian','other','two_or_more']

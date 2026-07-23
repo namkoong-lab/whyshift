@@ -1,6 +1,8 @@
 LICENSE
+MANIFEST.in
 README.md
 setup.py
+whyshift/README.md
 whyshift/__init__.py
 whyshift/algorithm.py
 whyshift/dataset.py
